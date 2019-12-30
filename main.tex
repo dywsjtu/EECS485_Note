@@ -1,6 +1,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{url}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.0in}
+\addtolength{\parskip}{8pt}
 \title{EECS485_Note}
 \author{dywsjtuji }
 \date{December 2019}
@@ -92,4 +97,22 @@ PORT STATE SERVICE \\
 Usually, it's not a good idea to port scan, some website might blacklist you for doing this.\\
 \textbf{Path}\\
 protocol://server:port/\textbf{path}?query#fragment\\
+• path is a file name relative to the server root \\
+• Default is /index.html \\
+curl \url{http://cse.eecs.umich.edu} \\
+is the same as\\
+curl \url{http://cse.eecs.umich.edu/index.html}\\
+• A different path loads a different page\\
+curl \url{http://cse.eecs.umich.edu/eecs/faculty/csefaculty.html}\\
+\textbf{Absolute Path vs. Relative Path}\\
+\textbf{Query}\\
+protocol://server:port/path\textbf{?query}#fragment\\
+• query string is a general-purpose set of parameters that the server
+(or specified resource on server) can use as it pleases\\
+\url{http://cse.eecs.umich.edu/eecs/etc/fac/CSEfaculty.html?match=Lecturer}\\
+\textbf{Fragment}\\
+protocol://server:port/path?query\textbf{#fragment}\\
+fragment is identified at the client, ignored by server\\
+example: navigate directly to the section labeled "Linking" \url{http://en.wikipedia.org/wiki/World_Wide_Web#Linking}\\
+
 \end{document}
