@@ -55,5 +55,41 @@ Events\\
 • Content is data; presentation is words, tables, organization; layout is
 visual.\\
 • Use HTML for content and presentation, add CSS for layout.\\
-\
+\large{\textbf{URL Encoding}}\\
+\textbf{Protocol}\\
+\textbf{protocol}://server:port/path?query#fragment\\
+Example: unencrypted http\\
+curl --verbose http://cse.eecs.umich.edu/ \\
+* Connected to cse.eecs.umich.edu (141.212.113.143) port 80 (\#0)\\
+Example: encrypted https\\
+curl --verbose https://cse.eecs.umich.edu/ * \\ Connected to cse.eecs.umich.edu (141.212.113.143) port 443 (\#0)\\
+* TLS 1.2 connection using \url{TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384} \\
+* Server certificate: www.cse.umich.edu \\
+\textbf{Server}\\
+protocol://\textbf{server}:port/path?query#fragment\\
+help locate the machine\\
+ curl --verbose http://\textbf{cse.eecs.umich.edu}/ \\
+* Connected to cse.eecs.umich.edu (\textbf{141.212.113.143}) port 80 (\#0)\\
+• DNS lookup translates server name into an IP address \\
+Example: \\
+host cse.eecs.umich.edu\\
+cse.eecs.umich.edu has address 141.212.113.143 \\
+\textbf{Port}\\
+protocol://server:\textbf{port}/path?query#fragment\\
+Port is used to identify a specific service\\
+One host machine, several servers\\
+80 is typically used HTTP, 443 for HTTPS\\
+To check if a port is open\\
+nc -v -z cse.eecs.umich.edu 80 \\
+cse.eecs.umich.edu [141.212.113.143] 80 (http) open\\
+To see what ports are open\\
+nmap cse.eecs.umich.edu\\
+PORT STATE SERVICE \\
+22/tcp open ssh \\
+80/tcp open http \\
+443/tcp open https\\
+5666/tcp open nrpe \\
+Usually, it's not a good idea to port scan, some website might blacklist you for doing this.\\
+\textbf{Path}\\
+protocol://server:port/\textbf{path}?query#fragment\\
 \end{document}
