@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{url}
+\title{EECS485_Note}
+\author{dywsjtuji }
+\date{December 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\large{\textbf{C/C++ Allocation}}\\
+• Static (global) and automatic
+(local) variable allocation is
+managed by the compiler\\
+• Deallocated automatically\\
+• Dynamic variable allocation is
+managed by the programmer\\
+• Deallocated manually\\ \\ 
+\large{\textbf{Python Object Allocation}}\\
+• Objects are allocated on
+assignment in a private heap\\
+• Objects are deallocated
+automatically\\• Objects are allocated on
+assignment in a private heap
+• Objects are deallocated
+automatically\\ \\ 
+\large{\textbf{Reference counting and Garbage collecting}} \\
+Deallocate when references  == 0 in every cycle\\ \\ 
+\textbf{Special Case}\\
+x = {} # x is a dictionary\\
+y = {} # x is a dictionary\\
+x["y"] = y # x references y\\
+y["x"] = x # y references x\\
+x = None\\
+y = None
+\section{Web Basics}
+HTML: Hyper Text Markup Language\\
+\url{https://www.w3schools.com/html/html_intro.asp }\\
+CSS: Cascading Style Sheet\\
+\url{https://www.w3schools.com/html/html_css.asp}\\
+\large{\textbf{Hypertext}}\\
+Text with embedded links to other documents.\\
+$<a $ $href="/eecs/etc/events/cseevents.html">\\
+Events\\
+</a>$\\
+\large{\textbf{Escape strings in URLS}}\\
+\&$lt$ for less than \%$20$ for space\\
+\large{\textbf{Content, Presentation, Layout}}\\
+• HTML has tags for all.\\
+• $<h1>$ is content\\
+• $<b>$ is presentation \\
+• Good to separate these.\\
+• Content is data; presentation is words, tables, organization; layout is
+visual.\\
+• Use HTML for content and presentation, add CSS for layout.\\
+\
+\end{document}
